@@ -1,7 +1,10 @@
  ### Sample Ansible Code
- [link]()
 
+Base Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/base)
 
+MySQL Galera Cluster Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/mysql)
+
+HA Proxy Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/haproxy)
 
 Rashian Burns
 ============
