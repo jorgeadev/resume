@@ -1,0 +1,10 @@
+[Unit]
+Description=Prometheus Process Exporter
+
+[Service]
+ExecStart=/usr/local/bin/process-exporter -config.path /etc/process-exporter.yml
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

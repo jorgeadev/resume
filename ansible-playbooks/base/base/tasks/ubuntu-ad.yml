@@ -1,0 +1,40 @@
+# LDAP Authenication Playbook
+---
+- name: Install LDAP Packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ ubuntu_ldap_packages }}"
+
+- name: Pam Auth configuration
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode }}"
+  with_items:
+    - { src: 'ubuntu-pam-common-password.j2',dest: '/etc/pam.d/common-password', mode: '0644'}
+    - { src: 'ubuntu-pam-common-session.j2',dest: '/etc/pam.d/common-session', mode: '0644'}
+    - { src: 'ubuntu-pam-common-account.j2',dest: '/etc/pam.d/common-account', mode: '0644'}
+    - { src: 'ldap.conf.j2',dest: '/etc/ldap/ldap.conf', mode: '0700'}
+    # Temp Hack for DNS Search in Openstack
+    - { src: 'resolv.conf.j2',dest: '/run/resolvconf/resolv.conf', mode: '0644'}
+
+- name: Deploy LDAP Config Files
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode }}"
+  with_items:
+    - { src: 'krb5.conf.j2',dest: '/etc/krb5.conf', mode: '0644'}
+    - { src: 'nslcd.conf.j2',dest: '/etc/nslcd.conf', mode: '0700'}
+    - { src: 'nsswitch.conf.j2',dest: '/etc/nsswitch.conf', mode: '0644'}
+    - { src: 'sssd.conf.j2',dest: '/etc/sssd/sssd.conf', mode: '0700'}
+  notify:
+    - restart-sssd
+    - restart-nscd
+
+- name: Start LDAP Services
+  service: name={{item}} state=restarted enabled=yes
+  with_items:
+    - nscd
+    - sssd

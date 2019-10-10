@@ -1,0 +1,15 @@
+# MySQL Tasks List
+---
+- include: install-mysql-repo.yml
+
+- include: etc_host.yml
+
+- include: mysql-packages.yml
+
+- include: secure.yml
+
+- include: mysql-config.yml
+
+- include: start_all.yml
+
+- include: admin_tasks.yml

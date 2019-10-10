@@ -1,0 +1,24 @@
+# Defaults for Ansible Base Server Role
+---
+# SSHD configuration variables
+ssh_allow_groups: [] # SSH Allow Group
+allow_user_passwords: "no" # SSH Pub-Key Access Only
+
+
+# AD Integration variables
+ad_domain: [] # AD Domain Name CAPS!
+ad_server_adr: [] # AD Server FQDN / IP
+ad_account_dn: [] # AD Bind User DN
+ad_account_pw: [] # AD Bind User Password
+ad_base_dn: [] # AD Base DN
+ad_users_dn: [] # AD Users Search DN
+
+# SSH-PUB-KEYS variables
+admin_users: [] # DevOps / SysAdmin Team SSH Pub-Keys
+
+# SUDOERS variables
+sudoers_admin_groups: [] # SUDOERS DevOps / SysAdmin Groups
+
+# Kibana / Elasticsearch variables
+kibana_server: [] # Kibana Server
+elasticsearch_server: [] # Elasticsearch Server

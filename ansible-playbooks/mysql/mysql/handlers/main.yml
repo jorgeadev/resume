@@ -1,0 +1,7 @@
+# Handlers file for MySQL Cluster Role
+---
+- name: restart-mariadb-server
+  service:
+    name: mariadb
+    state: restarted
+    enabled: yes

@@ -1,0 +1,4 @@
+# Start All MySQL Instances
+---
+- name: Start All Services
+  service: name=mariadb state=started enabled=yes

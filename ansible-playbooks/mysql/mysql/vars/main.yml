@@ -1,0 +1,14 @@
+# Celmaix MySQL Role Global Vars
+---
+mysql_packages:
+  - socat
+  - MariaDB-server
+  - MariaDB-client
+  - MariaDB-compat
+  - MariaDB-shared
+  - MariaDB-common
+  - MySQL-python
+  - mysql-connector-java
+  - rsync
+  - jemalloc
+  - galera

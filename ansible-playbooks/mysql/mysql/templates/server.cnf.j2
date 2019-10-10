@@ -1,0 +1,21 @@
+[galera]
+# Mandatory settings
+wsrep_on=ON
+binlog_format=ROW
+default-storage-engine=innodb
+innodb_autoinc_lock_mode=2
+innodb_locks_unsafe_for_binlog=1
+query_cache_size=0
+query_cache_type=0
+bind-address=0.0.0.0
+datadir=/var/lib/mysql
+innodb_log_file_size=100M
+innodb_file_per_table
+innodb_flush_log_at_trx_commit=2
+wsrep_provider=/usr/lib64/galera/libgalera_smm.so
+wsrep_cluster_address="gcomm://{{ master }},{{ slave01 }},{{ slave02 }}"
+wsrep_cluster_name= {{ cluster_name }}
+wsrep_node_name={{ inventory_hostname }}
+wsrep_node_address={{ ansible_eth0.ipv4.address }}
+wsrep_sst_method=rsync
+wsrep_sst_auth={{ cluster_user }}:{{ cluster_password }}

@@ -1,0 +1,116 @@
+# Monitoring Tools Playbook
+---
+- name: Prometheus Node Exporter Service Checks
+  stat:
+    path: /etc/systemd/system/prometheus.service
+  register: prometheus_status
+
+- name: Download Prometheus Node Exporter
+  get_url:
+    url: https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-amd64.tar.gz
+    dest: /tmp/node_exporter-0.17.0.linux-amd64.tar.gz
+    validate_certs: 0
+  when: prometheus_status.stat.exists == false
+
+- name: Install Prometheus Node Exporter
+  unarchive:
+    src: /tmp/node_exporter-0.17.0.linux-amd64.tar.gz
+    dest: /usr/local/
+    remote_src: yes
+    mode: 0755
+  when: prometheus_status.stat.exists == false
+
+- name: Link Prometheus Node Exporter Binary
+  file:
+    src: /usr/local/node_exporter-0.17.0.linux-amd64/node_exporter
+    dest: /usr/local/bin/node_exporter
+    state: link
+  when: prometheus_status.stat.exists == false
+
+- name: Set Prometheus Node Exporter systemd script
+  template:
+    src: prometheus.service.j2
+    dest: /etc/systemd/system/prometheus.service
+  when: prometheus_status.stat.exists == false
+  notify:
+    - restart-prometheus
+
+- name: Prometheus Process Exporter Service Checks
+  stat:
+    path: /etc/systemd/system/process-exporter.service
+  register: process_exporter_status
+
+- name: Download Prometheus Process Exporter
+  get_url:
+    url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter-0.4.0.linux-amd64.tar.gz
+    dest: /tmp/process-exporter-0.4.0.linux-amd64.tar.gz
+    validate_certs: 0
+  when: process_exporter_status.stat.exists == false
+
+- name: Install Prometheus Process Exporter
+  unarchive:
+    src: /tmp/process-exporter-0.4.0.linux-amd64.tar.gz
+    dest: /usr/local/
+    remote_src: yes
+    mode: 0755
+  when: process_exporter_status.stat.exists == false
+
+- name: Link Prometheus Process Exporter Binary
+  file:
+    src: /usr/local/process-exporter-0.4.0.linux-amd64/process-exporter
+    dest: /usr/local/bin/process-exporter
+    state: link
+  when: process_exporter_status.stat.exists == false
+
+- name: Configure Prometheus Process Exporter
+  copy:
+    src: base/templates/process-exporter.yml.j2
+    dest: /etc/process-exporter.yml
+  when: process_exporter_status.stat.exists == false
+
+- name: Set Prometheus Process Exporter systemd script
+  template:
+    src: process-exporter.service.j2
+    dest: /etc/systemd/system/process-exporter.service
+  when: process_exporter_status.stat.exists == false
+  notify:
+    - restart-process-exporter
+
+- name: Filebeats Service Checks
+  stat:
+    path: /lib/systemd/system/filebeat.service
+  register: filebeat_status
+
+- name: Install Filebeat (Ubnutu)
+  apt:
+    deb: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.6.0-amd64.deb
+  when: ansible_distribution == 'Ubuntu'
+
+- name: Install Filebeat (Centos)
+  yum:
+    name: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.6.0-x86_64.rpm
+    state: present
+  when: ansible_distribution == 'CentOS'
+
+- name: Configure Filebeat
+  template:
+    src: filebeat.yml.j2
+    dest: /etc/filebeat/filebeat.yml
+  when: filebeat_status.stat.exists == false
+  notify:
+    - restart-filebeat
+
+- name: Setup Filebeat
+  shell: |
+    filebeat modules enable system
+    filebeat setup
+  notify:
+    - restart-filebeat
+  when: filebeat_status.stat.exists == false
+
+- name: Start Filebeat and Prometheus Services
+  service: name={{item}} state=restarted enabled=yes
+  with_items:
+    - filebeat
+    - prometheus
+  when: filebeat_status.stat.exists == false

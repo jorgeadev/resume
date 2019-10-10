@@ -1,0 +1,24 @@
+# Package Items for Ansible Base Server Role
+---
+centos_ldap_packages:
+  - epel-release
+  - krb5-workstation
+  - pam_krb5
+  - sssd
+  - sssd-client
+  - ntp
+  - fprintd-pam
+  - rsyslog-gnutls
+
+ubuntu_ldap_packages:
+  - sssd
+  - sssd-tools
+  - ldap-utils
+  - krb5-user
+  - auth-client-config
+  - nslcd
+  - ntp
+
+ubuntu_rsyslog_packages:
+  - rsyslog
+  - rsyslog-gnutls

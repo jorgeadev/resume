@@ -1,0 +1,11 @@
+# Install rsyslog for Ubuntu
+---
+- name: Add Rsyslog repo
+  apt_repository:
+    repo: ppa:adiscon/v8-stable
+
+- name: Update rsyslog packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ ubuntu_rsyslog_packages }}"

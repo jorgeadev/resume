@@ -1,0 +1,41 @@
+# Defaults for MySQL Cluster Role
+---
+# Root MySQL Password
+mysql_root:
+
+# Create Databases
+mysql_databases:
+  - name: [] # DB Name
+    collation: [] # DB Collation
+    encoding: [] # DB Encoding
+
+# Create Database Users
+mysql_users:
+  - name: []  # DB Username
+    host: '' # DB User Host Access
+    password: [] # DB User Password
+    priv: '.*:' # DB User Permissions
+
+# MySQL Server Parameters
+innodb_buffer_pool_size: # in MB
+join_buffer_size:  # in MB
+read_rnd_buffer_size:  # in MB
+sort_buffer_size:  # in MB
+
+
+# MariaDB Cluster Parameters
+enable_clustering: []
+
+# Cluster Name
+cluster_name: []
+
+# Cluster Account Info
+cluster_user: []
+cluster_password: []
+
+
+# Cluster Servers
+#    db01 (Master) - db02 (Slave01)- db03 (Slave02)
+master: []
+slave01: []
+slave02: []

@@ -1,0 +1,5 @@
+# Celmatix HA Proxy Task
+---
+- include: install.yml
+
+- include: service.yml

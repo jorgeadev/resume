@@ -1,0 +1,18 @@
+# SSH Pub Key Playbook
+---
+- name: Create Admin Users Home Folder
+  file:
+    path: /home/{{ item }}/.ssh/
+    state: directory
+    owner: "{{ item }}"
+    mode: 0700
+  with_items: "{{ admin_users }}"
+
+- name: Add Admin Users Authorized Keys
+  authorized_key:
+    user: "{{ item }}"
+    state: present
+    manage_dir: yes
+    path: /home/{{ item }}/.ssh/authorized_keys
+    key: "{{ lookup('file', 'templates/pubkeys/'+ item + '.key.pub') }}"
+  with_items: "{{ admin_users }}"

@@ -1,0 +1,9 @@
+# Sudoser Management Playbook
+---
+- name: Grant Admin Sudo Access
+  lineinfile:
+    path: /etc/sudoers.d/20-admins
+    line: "{{ item }}"
+    state: present
+    create: yes
+  with_items: "{{ sudoers_admin_groups }}"

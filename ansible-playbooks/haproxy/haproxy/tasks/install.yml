@@ -1,0 +1,7 @@
+# Ansible HA-Proxy Server Role Packages
+---
+- name: Install HA Proxy Packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ haproxy_packages }}"

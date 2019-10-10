@@ -1,0 +1,6 @@
+# Prerequisites
+---
+- name: Remove Old MariaBD Packages
+  yum:
+    name: mariadb-libs
+    state: absent

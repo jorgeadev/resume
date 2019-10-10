@@ -1,0 +1,35 @@
+# LDAP Authenication Playbook
+---
+- name: Install LDAP Packages
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ centos_ldap_packages }}"
+
+- name: Pam Auth configuration
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode }}"
+  with_items:
+    - { src: 'centos-pam-password-auth-ac.j2',dest: '/etc/pam.d/password-auth-ac', mode: '0644'}
+    - { src: 'centos-pam-system-auth-ac.j2',dest: '/etc/pam.d/system-auth-ac', mode: '0644'}
+    # Temp Hack for DNS Search in Openstack
+    - { src: 'resolv.conf.j2',dest: '/etc/resolv.conf', mode: '0644'}
+
+- name: Deploy LDAP Config Files
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode }}"
+  with_items:
+    - { src: 'ldap.conf.j2',dest: '/etc/ldap.conf', mode: '0700'}
+    - { src: 'krb5.conf.j2',dest: '/etc/krb5.conf', mode: '0644'}
+    - { src: 'nslcd.conf.j2',dest: '/etc/nslcd.conf', mode: '0700'}
+    - { src: 'nsswitch.conf.j2',dest: '/etc/nsswitch.conf', mode: '0644'}
+    - { src: 'sssd.conf.j2',dest: '/etc/sssd/sssd.conf', mode: '0700'}
+  notify:
+    - restart-sssd
+
+- name: Start LDAP Services
+  service: name=sssd state=started enabled=yes

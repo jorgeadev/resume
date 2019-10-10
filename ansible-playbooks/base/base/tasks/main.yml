@@ -1,0 +1,33 @@
+# Tasks file for Ansible Base Server Role
+---
+- include: selinux.yml
+  when: ansible_distribution == 'CentOS'
+
+- include: centos-sshd.yml
+  when: ansible_distribution == 'CentOS'
+
+- include: ubuntu-sshd.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- include: centos-ad.yml
+  when: ansible_distribution == 'CentOS'
+
+- include: ubuntu-ad.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- include: sudoers.yml
+
+- include: ssh-pub-keys.yml
+
+- include: ntp-ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- include: ntp-centos.yml
+  when: ansible_distribution == 'CentOS'
+
+- include: rsyslog-install.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- include: rsyslog_config.yml
+
+- include: monitoring.yml

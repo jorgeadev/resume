@@ -1,0 +1,51 @@
+[nss]
+filter_groups = root
+filter_users = root
+reconnection_retries = 3
+
+[pam]
+reconnection_retries = 3
+
+[sssd]
+config_file_version = 2
+services = nss, pam
+domains = default
+
+[domain/default]
+enumerate = true
+cache_credentials = true
+id_provider = ldap
+
+access_provider = ldap
+auth_provider = krb5
+chpass_provider = krb5
+
+ldap_uri = ldap://{{ ad_server_adr }}
+ldap_search_base = {{ ad_users_dn }}
+ldap_group_search_base = {{ ad_users_dn }}
+
+ldap_default_bind_dn = {{ ad_account_dn }}
+ldap_default_authtok_type = password
+ldap_default_authtok = {{ ad_account_pw }}
+
+ldap_user_object_class = user
+ldap_user_name = sAMAccountName
+ldap_user_uid_number = uidNumber
+ldap_user_gid_number = gidNumber
+ldap_user_home_directory = unixHomeDirectory
+ldap_user_shell = loginShell
+ldap_user_principal = userPrincipalName
+ldap_user_member_of = memberOf
+
+ldap_group_object_class = group
+ldap_group_gid_number = gidNumber
+ldap_group_name = cn
+ldap_group_member = member
+ldap_access_filter = {{ ad_users_dn }}
+ldap_force_upper_case_realm = true
+
+auth_provider = krb5
+chpass_provider = none
+krb5_realm = {{ ad_domain }}
+krb5_server = {{ ad_server_adr }}
+krb5_kpasswd = none

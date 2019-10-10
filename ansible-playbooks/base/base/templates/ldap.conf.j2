@@ -1,0 +1,22 @@
+uri ldap://{{ ad_server_adr }}
+tls_cacertdir /etc/openldap/cacerts
+ldap_version 3
+binddn {{ ad_account_dn }}
+bindpw {{ ad_account_pw }}
+scope sub
+timelimit 30
+bind_timelimit 30
+bind_policy hard
+idle_timelimit 3600
+pam_password md5
+nss_base_passwd {{ ad_base_dn }}?sub
+nss_base_group {{ ad_users_dn }}?sub
+nss_base_shadow {{ ad_users_dn }}?sub
+pam_filter objectclass=user
+nss_map_objectclass shadowAccount user
+nss_map_attribute uid sAMAccountName
+nss_map_attribute homeDirectory unixHomeDirectory
+pam_login_attribute sAMAccountName
+nss_map_attribute shadowLastChange pwdLastSet
+nss_map_attribute gid gidNumber
+nss_map_attribute uniqueMember member

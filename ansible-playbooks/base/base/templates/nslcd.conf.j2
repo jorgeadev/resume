@@ -1,0 +1,39 @@
+# /etc/nslcd.conf
+# nslcd configuration file. See nslcd.conf(5)
+# for details.
+
+# The user and group nslcd should run as.
+uid nslcd
+gid nslcd
+
+# The location at which the LDAP server(s) should be reachable.
+uri ldap://{{ ad_server_adr }}
+
+# The search base that will be used for all queries.
+base {{ ad_users_dn }}
+
+# The LDAP protocol version to use.
+#ldap_version 3
+
+# The DN to bind with for normal lookups.
+binddn {{ ad_account_dn }}
+bindpw {{ ad_account_pw }}
+
+
+# SSL options
+ssl off
+#tls_reqcert never
+#tls_cacertfile /etc/ssl/certs/ca-certificates.crt
+
+# Mappings for Active Directory
+pagesize 1000
+referrals off
+filter passwd (&(objectClass=user)(!(objectClass=computer))(uidNumber=*)(unixHomeDirectory=*))
+map    passwd uid              sAMAccountName
+map    passwd homeDirectory    unixHomeDirectory
+map    passwd gecos            displayName
+filter shadow (&(objectClass=user)(!(objectClass=computer))(uidNumber=*)(unixHomeDirectory=*))
+map    shadow uid              sAMAccountName
+map    shadow shadowLastChange pwdLastSet
+filter group  (&(objectClass=group)(gidNumber=*))
+#map    group  uniqueMember     member

@@ -1,0 +1,9 @@
+# Install MySQL Repo
+---
+- name: Install MariaDB repo
+  yum_repository:
+    name: mariadb
+    description: MariaDB
+    baseurl: http://yum.mariadb.org/10.3.9/centos73-amd64/
+    gpgcheck: no
+    enabled: yes

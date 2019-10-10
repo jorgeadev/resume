@@ -1,0 +1,13 @@
+# Ansible HA-Proxy Server Role Service Task
+---
+- name: Wildcard Certificate
+  template:
+    src: wildcard.j2
+    dest: /etc/ssl/private/wildcard.pem
+
+- name: HA Proxy LB Services
+  template:
+    src: haproxy.cfg.j2
+    dest: /etc/haproxy/haproxy.cfg
+  notify:
+    - restart-haproxy

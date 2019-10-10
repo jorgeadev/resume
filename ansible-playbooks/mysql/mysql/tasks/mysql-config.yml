@@ -1,0 +1,35 @@
+# Configure MySQL Task
+---
+- name: Configure MariaDB Server Parameters
+  template:
+    src: my.cnf.j2
+    dest: /etc/my.cnf
+
+- name: Cluster Check
+  stat: path=/var/lib/mysql/grastate.dat
+  register: cluster_status
+  when: >
+    "'db01' in inventory_hostname"
+
+- name: Configure MariaDB Cluster Parameters
+  template:
+    src: server.cnf.j2
+    dest: /etc/my.cnf.d/server.cnf
+  when: >
+    enable_clustering == 'true'
+
+- name: Stop MariaDB
+  service: name=mariadb state=stopped enabled=yes
+  when: >
+    enable_clustering == 'true' and (not cluster_status.stat.exists)
+
+- name: Start Cluster
+  command: /bin/galera_new_cluster
+  when: >
+    "'db01' in inventory_hostname" and (not cluster_status.stat.exists)
+    and (enable_clustering == 'true')
+
+#- name: MariaDB Debugging
+#  template:
+#    src: debug.cnf.j2
+#    dest: /etc/my.cnf.d/debug.cnf

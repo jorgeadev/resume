@@ -1,0 +1,24 @@
+# Configure rsyslog
+---
+- name: Update rsyslog config (CentOS)
+  template:
+    src: centos-rsyslog.conf.j2
+    dest: /etc/rsyslog.conf
+  when: ansible_distribution == 'CentOS'
+  notify:
+    - restart-rsyslog
+
+- name: Update rsyslog config (Ubuntu)
+  template:
+    src: ubuntu-rsyslog.conf.j2
+    dest: /etc/rsyslog.conf
+  when: ansible_distribution == 'Ubuntu'
+  notify:
+    - restart-rsyslog
+
+- name: Update rsyslog system config
+  template:
+    src: 50-default.conf.j2
+    dest: /etc/rsyslog.d/50-default.conf
+  notify:
+    - restart-rsyslog

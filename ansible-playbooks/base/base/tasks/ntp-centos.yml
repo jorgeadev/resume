@@ -1,0 +1,5 @@
+# NTP Setup
+---
+- name: Start NTP Services
+  service: name=ntpd state=restarted enabled=yes
+  when: ansible_distribution == 'CentOS'

@@ -1,0 +1,4 @@
+# Celmatix HA-Proxy Global Vars
+---
+haproxy_packages:
+  - haproxy

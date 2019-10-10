@@ -1,0 +1,44 @@
+# Handlers file for Ansible Base Server Role
+---
+- name: restart-sshd
+  service:
+    name: sshd
+    state: restarted
+    enabled: yes
+
+- name: restart-sssd
+  service:
+    name: sssd
+    state: restarted
+    enabled: yes
+
+- name: restart-nscd
+  service:
+    name: nscd
+    state: restarted
+    enabled: yes
+  when: ansible_distribution == "Ubuntu"
+
+- name: restart-rsyslog
+  service:
+    name: rsyslog
+    state: restarted
+    enabled: yes
+
+- name: restart-prometheus
+  service:
+    name: prometheus
+    state: restarted
+    enabled: yes
+
+- name: restart-process-exporter
+  service:
+    name: process-exporter
+    state: restarted
+    enabled: yes
+
+- name: restart-filebeat
+  service:
+    name: filebeat
+    state: restarted
+    enabled: yes

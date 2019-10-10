@@ -1,0 +1,24 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/*.log
+    - /var/log/syslog
+    - /var/log/secure
+
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+setup.template.settings:
+  index.number_of_shards: 3
+
+setup.kibana:
+  host: http://{{ kibana_server }}
+
+output.elasticsearch:
+  hosts: {{ elasticsearch_server }}
+
+processors:
+  - add_host_metadata: ~
+  - add_cloud_metadata: ~

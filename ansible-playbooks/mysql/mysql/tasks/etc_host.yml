@@ -1,0 +1,9 @@
+# Generate /etc/hosts
+---
+- name: Generate Host File
+  template:
+    src: host_update.j2
+    dest: /etc/hosts
+    owner: root
+    group: root
+    mode: 0644

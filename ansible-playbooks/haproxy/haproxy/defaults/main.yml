@@ -1,0 +1,32 @@
+# Ansible HA-Proxy Server Role
+---
+# This role is written to work with HTTP and TCP mode connections ONLY!
+
+# Load Balancer Variables
+http_load_balancers:
+  - description: []
+    service_dns_name: []
+    lb_name: []
+    lb_ip: '*'
+    balance_type: source
+    connection_mode: http
+    options: []
+    servers:
+      - name: []
+        addr: []
+        port: []
+
+tcp_load_balancers:
+  - description: []
+    service_dns_name: [] # DNS Short name
+    lb_name: []
+    lb_ip: '*'
+    balance_type: source
+    connection_mode: tcp
+    bind_port: []
+    options: []
+    servers:
+      - name: []
+        addr: []
+        port: []
+        options: []

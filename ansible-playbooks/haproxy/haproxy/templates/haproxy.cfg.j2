@@ -1,0 +1,79 @@
+global
+  log /dev/log	local0
+  log /dev/log	local1 notice
+  chroot /var/lib/haproxy
+  stats socket /run/haproxy/admin.sock mode 660 level admin
+  stats timeout 30s
+  user haproxy
+  group haproxy
+  daemon
+  ssl-default-bind-ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS
+  ssl-default-bind-options no-sslv3
+
+defaults
+  log	 global
+  option   redispatch
+  retries  3
+  option	 dontlognull
+  timeout  http-request 10s
+  timeout  queue 1m
+  timeout  connect 10s
+  timeout  client 1m
+  timeout  server 1m
+  timeout  check 10s
+  errorfile 400 /etc/haproxy/errors/400.http
+  errorfile 403 /etc/haproxy/errors/403.http
+  errorfile 408 /etc/haproxy/errors/408.http
+  errorfile 500 /etc/haproxy/errors/500.http
+  errorfile 502 /etc/haproxy/errors/502.http
+  errorfile 503 /etc/haproxy/errors/503.http
+  errorfile 504 /etc/haproxy/errors/504.http
+
+frontend http
+  bind *:80
+  bind *:443 ssl crt /etc/ssl/private/wildcard.pem
+  redirect scheme https if !{ ssl_fc }
+  mode http
+{% for name in http_load_balancers %}
+  acl host_{{ name.service_dns_name }} hdr(host) -i {{ name.service_dns_name }}.celmatix.net
+  use_backend {{ name.lb_name }} if host_{{ name.service_dns_name }}
+{% endfor %}
+
+{% for name in http_load_balancers %}
+backend {{ name.lb_name }}
+  description {{ name.description }}
+  balance {{ name.balance_type }}
+  mode {{ name.connection_mode }}
+{% for option in name.options %}
+  option {{ option }}
+{% endfor %}
+  timeout connect 10s
+  timeout client 1m
+  timeout server 1m
+{% for host in name.servers %}
+  server {{ host.name }} {{ host.addr }}:{{ host.port }} check inter 10000 rise 2 fall 5
+{% endfor %}
+
+{% endfor %}
+
+{% for name in tcp_load_balancers %}
+frontend {{ name.lb_name }}_tcp
+  bind *:{{ name.bind_port }}
+  mode {{ name.connection_mode }}
+  use_backend {{ name.lb_name }}
+
+backend {{ name.lb_name }}
+  description {{ name.description }}
+  balance {{ name.balance_type }}
+  mode {{ name.connection_mode }}
+{% for option in name.options %}
+  option {{ option }}
+{% endfor %}
+  timeout connect 30m
+  timeout client 1h
+  timeout server 1h
+{% for host in name.servers %}
+  server {{ host.name }} {{ host.addr }}:{{ host.port }} check inter 10000 rise 2 fall 5 {{ host.options }}
+{% endfor %}
+
+{% endfor %}

@@ -1,0 +1,5 @@
+# NTP Setup
+---
+- name: Start NTP Services
+  service: name=ntp state=restarted enabled=yes
+  when: ansible_distribution == 'Ubuntu'

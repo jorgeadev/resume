@@ -1,0 +1,7 @@
+# Celmatix HA-Proxy Playbook Role
+---
+- name: Celmatix HA-Proxy Playbook Role
+  hosts: haproxy
+  become: yes
+  roles:
+    - haproxy

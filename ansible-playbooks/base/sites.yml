@@ -1,0 +1,7 @@
+# Celmatix Ansible Playbook Roles
+---
+- name: Celmatix Ansible Playbook Roles
+  hosts: base
+  become: yes
+  roles:
+    - base

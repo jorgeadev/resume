@@ -1,0 +1,8 @@
+#%PAM-1.0
+# This file is auto-generated.
+# User changes will be destroyed the next time authconfig is run.
+account	[success=1 new_authtok_reqd=done default=ignore]	pam_unix.so
+account	requisite			pam_deny.so
+account	required			pam_permit.so
+account	sufficient		pam_localuser.so
+account	optional			pam_sss.so
