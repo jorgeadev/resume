@@ -1,6 +1,6 @@
-# Celmatix HA-Proxy Playbook Role
+# Ansible HA-Proxy Server Role
 ---
-- name: Celmatix HA-Proxy Playbook Role
+- name: Ansible HA-Proxy Server Role
   hosts: haproxy
   become: yes
   roles:

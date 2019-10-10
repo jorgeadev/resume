@@ -1,6 +1,6 @@
-# Celmatix Ansible Playbook Roles
+# MySQL Cluster Role
 ---
-- name: Celmatix Ansible Playbook Roles
+- name: MySQL Cluster Role
   hosts: mysql
   become: yes
   roles:

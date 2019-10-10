@@ -1,6 +1,6 @@
-# Celmatix Ansible Playbook Roles
+# Ansible Base Server Role
 ---
-- name: Celmatix Ansible Playbook Roles
+- name: Ansible Base Server Role
   hosts: base
   become: yes
   roles:
