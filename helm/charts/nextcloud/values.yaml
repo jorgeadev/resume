@@ -1,0 +1,62 @@
+## Celmatix Nextcloud Helm Chart ##
+
+## NextCloud Components Docker Images
+nextcloud:
+  image: nextcloud
+  imageTag: latest
+  pullPolicy: IfNotPresent
+
+mariadb:
+  image: mariadb
+  imageTag: latest
+  pullPolicy: IfNotPresent
+
+## Pod Resoure Configurations
+nextcloudspec:
+  resources:
+    limits:
+      memory: 4096Mi
+      cpu: 2000m
+    requests:
+      memory: 2048Mi
+      cpu: 1000m
+
+mariadbspec:
+  resources:
+    limits:
+      memory: 2048Mi
+      cpu: 1000m
+    requests:
+      memory: 1024Mi
+      cpu: 512m
+
+## NextCloud Parameters
+nextcloudparams:
+  extraEnv:
+    NEXTCLOUD_ADMIN_USER:
+    NEXTCLOUD_ADMIN_PASSWORD:
+
+## MariaDB Parameters
+mariadbparams:
+  extraEnv:
+    MYSQL_ROOT_PASSWORD:
+    MYSQL_PASSWORD: 
+    MYSQL_DATABASE:
+    MYSQL_USER:
+
+## Persistant Volume Parameters (PVC)
+nextcloudpvc:
+  volume:
+    pvcname:
+    size:
+
+mariadbpvc:
+  volume:
+    pvcname:
+    size:
+
+## Kubernetes Ingress Parameters
+proxy:
+  ingress:
+    hostname:
+    tlssecret:

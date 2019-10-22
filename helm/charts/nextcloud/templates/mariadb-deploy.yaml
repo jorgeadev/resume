@@ -1,0 +1,48 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ template "nextcloud.mariadb.fullname" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    component: "{{ .Values.nextcloud.name }}"
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+  name: {{ template "nextcloud.mariadb.fullname" . }}
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{ template "nextcloud.mariadb.fullname" . }}
+    spec:
+      containers:
+        - image: "{{ .Values.mariadb.image }}:{{ .Values.mariadb.imageTag }}"
+          imagePullPolicy: {{ default "" .Values.mariadb.pullPolicy | quote }}
+          name: {{ template "nextcloud.mariadb.fullname" . }}
+          resources:
+            requests:
+              cpu: {{ .Values.mariadbspec.resources.requests.cpu | quote }}
+              memory: {{ .Values.mariadbspec.resources.requests.memory | quote }}
+            limits:
+              cpu: {{ .Values.mariadbspec.resources.limits.cpu | quote }}
+              memory: {{ .Values.mariadbspec.resources.limits.memory | quote }}
+          env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: {{ default "" .Values.mariadbparams.extraEnv.MYSQL_ROOT_PASSWORD | quote }}
+          - name: MYSQL_PASSWORD
+            value:  {{ default "" .Values.mariadbparams.extraEnv.MYSQL_PASSWORD | quote }}
+          - name: MYSQL_DATABASE
+            value: {{ default "nextcloud" .Values.mariadbparams.extraEnv.MYSQL_DATABASE | quote }}
+          - name: MYSQL_USER
+            value: {{ default "nextcloud" .Values.mariadbparams.extraEnv.MYSQL_USER | quote }}
+          ports:
+          - name: mariadb
+            containerPort: 3306
+          volumeMounts:
+          - name: db-data
+            mountPath: /var/lib/mysql
+      volumes:
+      - name: db-data
+        persistentVolumeClaim:
+          claimName: {{ .Values.mariadbpvc.volume.pvcname }}

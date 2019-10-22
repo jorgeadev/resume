@@ -1,0 +1,52 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ template "nextcloud.fullname" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    component: "{{ .Values.nextcloud.name }}"
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+  name: {{ template "nextcloud.fullname" . }}
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{ template "nextcloud.fullname" . }}
+    spec:
+      containers:
+        - image: "{{ .Values.nextcloud.image }}:{{ .Values.nextcloud.imageTag }}"
+          imagePullPolicy: {{ default "" .Values.nextcloud.pullPolicy | quote }}
+          name: {{ template "nextcloud.fullname" . }}
+          resources:
+            requests:
+              cpu: {{ .Values.nextcloudspec.resources.requests.cpu | quote }}
+              memory: {{ .Values.nextcloudspec.resources.requests.memory | quote }}
+            limits:
+              cpu: {{ .Values.nextcloudspec.resources.limits.cpu | quote }}
+              memory: {{ .Values.nextcloudspec.resources.limits.memory | quote }}
+          env:
+          - name: NEXTCLOUD_ADMIN_USER
+            value: {{ default "" .Values.nextcloudparams.extraEnv.NEXTCLOUD_ADMIN_USER | quote }}
+          - name: NEXTCLOUD_ADMIN_PASSWORD
+            value: {{ default "" .Values.nextcloudparams.extraEnv.NEXTCLOUD_ADMIN_PASSWORD | quote }}
+          - name: MYSQL_DATABASE
+            value: {{ default "nextcloud" .Values.mariadbparams.extraEnv.MYSQL_DATABASE | quote }}
+          - name: MYSQL_USER
+            value: {{ default "nextcloud" .Values.mariadbparams.extraEnv.MYSQL_USER | quote }}
+          - name: MYSQL_PASSWORD
+            value: {{ default "" .Values.mariadbparams.extraEnv.MYSQL_PASSWORD | quote }}
+          - name: MYSQL_HOST
+            value: {{ template "nextcloud.mariadb.fullname" . }}.{{ .Release.Namespace }}.svc
+          ports:
+          - name: http
+            containerPort: 80
+          volumeMounts:
+          - name: www-data
+            mountPath: /var/www/html
+      volumes:
+      - name: www-data
+        persistentVolumeClaim:
+          claimName: {{ .Values.nextcloudpvc.volume.pvcname }}

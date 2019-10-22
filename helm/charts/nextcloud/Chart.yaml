@@ -1,0 +1,13 @@
+name: nextcloud
+version: 1
+description: NextCloud File Sharing Services
+keywords:
+  - nextcloud:fpm
+  - mariadb
+home: https://github.com/nextcloud/docker/
+sources:
+  - https://github.com/nextcloud/docker/
+  - https://github.com/docker-library/mariadb/
+maintainers:
+  - name: rburns
+    email: r.burns@celmatix.com
