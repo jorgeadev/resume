@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: minio-minio
+  labels:
+    app: minio-minio
+    chart: minio-0.3.1
+    release: minio
+    heritage: Tiller
+  annotations:
+spec:
+  rules:
+    - host: minio.celmatix.net
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: minio-minio-svc
+              servicePort: 9000

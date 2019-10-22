@@ -1,0 +1,73 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: terraform-apply
+spec:
+  backoffLimit: 5
+  activeDeadlineSeconds: 1800
+  template:
+    metadata:
+      name: terraform-apply
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: kubectl-proxy
+        image: localhost:5000/celmatix/kubectl:latest
+        imagePullPolicy: Always
+        command: ["/bin/bash", "-c"]
+        args:
+          - |
+            kubectl proxy -p 8080 &
+            CHILD_PID=$!
+            (while true; do if [[ -f "/tmp/kubectl-proxy-signal/main-terminated" ]]; then kill $CHILD_PID; fi; sleep 1; done) &
+            wait $CHILD_PID
+            if [[ -f "/tmp/kubectl-proxy-signal/main-terminated" ]]; then exit 0; fi
+        volumeMounts:
+        - mountPath: /tmp/kubectl-proxy-signal
+          name: kubectl-proxy-signal
+          readOnly: true
+      - name: terraform-apply
+        image: localhost:5000/celmatix/terraform:latest
+        imagePullPolicy: Always
+        workingDir: /terraform-state
+        command: ["/bin/bash", "-c"]
+        # TODO - separate these steps for review
+        # TODO - ensure that helm repositories are preserved between runs (use separate state volume)
+        # TODO - ensure that helm config is set automatically to the appropriate servers
+        args:
+          - |
+            set -e
+            trap "touch /tmp/kubectl-proxy-signal/main-terminated" EXIT
+            rm -f /terraform-state/tfplan || true
+            if find "/root/.helm" -not -name "lost+found" -mindepth 1 -print -quit | grep -q .; then
+              helm repo update;
+            else
+              helm init --client-only;
+            fi \
+            && terraform init -input=false /terraform_config \
+            && terraform plan -out=tfplan -input=false /terraform_config \
+            && terraform apply -input=false tfplan
+            TERRAFORM_EXIT=$?
+            rm -f /terraform-state/tfplan || true
+            exit ${TERRAFORM_EXIT}
+        volumeMounts:
+        - name: terraform-config
+          mountPath: /terraform_config
+        - name: terraform-state
+          mountPath: /terraform-state
+        - name: terraform-helm-state
+          mountPath: /root/.helm
+        - mountPath: /tmp/kubectl-proxy-signal
+          name: kubectl-proxy-signal
+      volumes:
+        - name: terraform-config
+          configMap:
+            name: terraform-config
+        - name: terraform-state
+          persistentVolumeClaim:
+            claimName: terraform-state
+        - name: terraform-helm-state
+          persistentVolumeClaim:
+            claimName: terraform-helm-state
+        - name: kubectl-proxy-signal
+          emptyDir: {}

@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: minio-bucket-create
+spec:
+  activeDeadlineSeconds: 180
+  template:
+    metadata:
+      name: minio-bucket-create
+    spec:
+      restartPolicy: Never
+      # TODO - re-enable when 1.8 is released
+      # backoffLimit: 5
+      containers:
+      - name: minio-bucket-create
+        image: minio/mc:latest
+        command: ["/bin/sh"]
+        # TODO - replace access key and secret key
+        args: ["-c", "mc config host add minio http://minio-minio-svc:9000 AKIAIOSFODNN7EXAMPLE wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY S3v4; \
+                      mc mb minio/helm-repo; \
+                      mc policy download minio/helm-repo"]
