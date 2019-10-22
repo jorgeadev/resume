@@ -6,6 +6,10 @@ MySQL Galera Cluster Server provisioning [link](https://github.com/naztyroc/resu
 
 HA Proxy Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/haproxy)
 
+Terraform Kubernetes (minikube local build) [link] (https://github.com/naztyroc/resume/tree/master/terraform)
+
+NextCloud Helm Chart [link] (https://github.com/naztyroc/resume/tree/master/helm/charts/nextcloud)
+
 Rashian Burns
 ============
 
