@@ -1,4 +1,4 @@
- ### Sample Ansible Code
+ ### Sample DevOps Code
 
 Base Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/base)
 
