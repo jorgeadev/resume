@@ -10,6 +10,8 @@ Terraform Kubernetes (minikube local build) [link](https://github.com/naztyroc/r
 
 NextCloud Helm Chart [link](https://github.com/naztyroc/resume/tree/master/helm/charts/nextcloud)
 
+AWS / Python [link](https://github.com/naztyroc/resume/tree/master/aws)
+
 Rashian Burns
 ============
 
