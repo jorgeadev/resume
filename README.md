@@ -113,7 +113,7 @@ Education
 :  **Amazon Web Services, Cloud Practitioner** [link](https://drive.google.com/file/d/1CAf8p3stEKbTEF-UXMfltJCIB93dIRHb/view?usp=sharing)
 
 2015
-:   **Redhat Inc, Red Hat Satellite 6 Administration Version** [link](https://drive.google.com/file/d/1w_aSIJUrur84mDk7mgcgFJX1I7rYeDRS/view?usp=sharing)
+:   **Redhat Inc, Red Hat Satellite 6 Administration** [link](https://drive.google.com/file/d/1w_aSIJUrur84mDk7mgcgFJX1I7rYeDRS/view?usp=sharing)
 
 2014
 :   **Redhat Inc, RHCSA** [link](https://drive.google.com/file/d/1GuE4RZLjqpO-4YreLp6C0LSll93_D3Jp/view?usp=sharing)
@@ -121,4 +121,4 @@ Education
 2005
 :   **Hofstra University, Computer Science Major**
 
-* PDF Version.. [link](https://drive.google.com/open?id=1qC3dmgmXbpp-uHVXpdDphppZFEeHxDiz)
+* PDF Version.. [link](https://drive.google.com/file/d/1SezJIbJyU9hEHTV7uHnnomW1jriOWIuR/view?usp=sharing)
