@@ -109,11 +109,14 @@ Duties included: administrating 5 servers, Sun 4500 Solaris 9 Server (3TB Fiber 
 Education
 ----------
 
-2014
-:   **Redhat Inc, RHCSA**
+2020
+:  **Amazon Web Services, Cloud Practitioner** [link](https://drive.google.com/file/d/1CAf8p3stEKbTEF-UXMfltJCIB93dIRHb/view?usp=sharing)
 
-2007
-:   **Redhat Inc, RH436 Red Hat Enterprise Clustering and Storage Management**
+2015
+:   **Redhat Inc, Red Hat Satellite 6 Administration Version** [link](https://drive.google.com/file/d/1w_aSIJUrur84mDk7mgcgFJX1I7rYeDRS/view?usp=sharing)
+
+2014
+:   **Redhat Inc, RHCSA** [link](https://drive.google.com/file/d/1GuE4RZLjqpO-4YreLp6C0LSll93_D3Jp/view?usp=sharing)
 
 2005
 :   **Hofstra University, Computer Science Major**
