@@ -110,6 +110,9 @@ Education
 ----------
 
 2020
+:  **Amazon Web Services, Certified Solutions Architect - Associate** [link](https://drive.google.com/file/d/1L1JB1m4g8T0eP5OXEUErPkmQ3Sys5SdU/view?usp=sharing)
+
+2020
 :  **Amazon Web Services, Cloud Practitioner** [link](https://drive.google.com/file/d/1CAf8p3stEKbTEF-UXMfltJCIB93dIRHb/view?usp=sharing)
 
 2015
