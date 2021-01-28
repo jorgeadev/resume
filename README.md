@@ -110,7 +110,7 @@ Education
 ----------
 
 2021
-:  **Cloud Native Computing, Certified Certified Kubernetes Administator** [link](https://drive.google.com/file/d/1w_aSIJUrur84mDk7mgcgFJX1I7rYeDRS/view?usp=sharing)
+:  **The Cloud Native Computing Foundation, Certified Certified Kubernetes Administator** [link](https://drive.google.com/file/d/1GjSt9FKqugCZEJdCydMSciMsHEpjSpGz/view?usp=sharing)
 
 2020
 :  **Amazon Web Services, Certified Solutions Architect - Associate** [link](https://drive.google.com/file/d/1L1JB1m4g8T0eP5OXEUErPkmQ3Sys5SdU/view?usp=sharing)
