@@ -55,7 +55,7 @@ Professional Experience
 
     *Responsible for creating automated clusters for development and production workloads for developers and data scientist.*
 ---
-Duties include: creating and maintaining helm charts for pipeline systems, creating and maintaining docker related code for deploying/building microservices, creating ansible playbooks for provisioning systems on AWS and Openstack instances, managing onsite and cloud Kubernetes clusters(v1.12.x), managing onsite Openstack cluster, managing AWS cloud, integrate SSO connectivity (AD / LDAP, SSSD), linux administration (ubuntu / centos), assist with Windows AD system administration.
+Duties include: creating and maintaining helm charts for pipeline systems, creating and maintaining docker related code for deploying/building microservices, creating ansible playbooks for provisioning systems on AWS and Openstack instances, managing onsite and cloud Kubernetes clusters(v1.19.x), managing onsite Openstack cluster, managing AWS cloud, integrate SSO connectivity (AD / LDAP, SSSD), linux administration (ubuntu / centos), assist with Windows AD system administration.
 
 2017
 :   **The New York Times, Linux Administator**; New York, NY
