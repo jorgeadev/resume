@@ -127,4 +127,4 @@ Education
 2005
 :   **Hofstra University, Computer Science Major**
 
-* PDF Version.. [link](https://drive.google.com/file/d/1SezJIbJyU9hEHTV7uHnnomW1jriOWIuR/view?usp=sharing)
+* [Resume PDF Version](https://drive.google.com/file/d/1SezJIbJyU9hEHTV7uHnnomW1jriOWIuR/view?usp=sharing)
