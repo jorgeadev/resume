@@ -51,7 +51,7 @@ Professional Experience
 ---------
 
 2017-Present
-:   **Celmatix, DevOps Engineer**; New York, NY
+:   **Celmatix, R&D Platform Engineer**; New York, NY
 
     *Responsible for creating automated clusters for development and production workloads for developers and data scientist.*
 ---
