@@ -110,19 +110,19 @@ Education
 ----------
 
 2021
-:  **The Cloud Native Computing Foundation, Certified Kubernetes Administator** [link](https://drive.google.com/file/d/1GjSt9FKqugCZEJdCydMSciMsHEpjSpGz/view?usp=sharing)
+:  **The Cloud Native Computing Foundation, Certified Kubernetes Administator** [link](https://drive.google.com/file/d/1yeiW45hn7LWFxYslYYZxU2ltHPX9-0wS/view?usp=sharing)
 
 2020
-:  **Amazon Web Services, Certified Solutions Architect - Associate** [link](https://drive.google.com/file/d/1L1JB1m4g8T0eP5OXEUErPkmQ3Sys5SdU/view?usp=sharing)
+:  **Amazon Web Services, Certified Solutions Architect - Associate** [link](https://drive.google.com/file/d/18B7DjULRwI-BEBypouKRnRZK8hv4OpC6/view?usp=sharing)
 
 2020
-:  **Amazon Web Services, Cloud Practitioner** [link](https://drive.google.com/file/d/1CAf8p3stEKbTEF-UXMfltJCIB93dIRHb/view?usp=sharing)
+:  **Amazon Web Services, Cloud Practitioner** [link](https://drive.google.com/file/d/1JmyxXIHP0DWU6k2DxD4IAF15NQKV_DLD/view?usp=sharing)
 
 2015
-:   **Redhat Inc, Red Hat Satellite 6 Administration** [link](https://drive.google.com/file/d/1w_aSIJUrur84mDk7mgcgFJX1I7rYeDRS/view?usp=sharing)
+:   **Redhat Inc, Red Hat Satellite 6 Administration** [link](https://drive.google.com/file/d/1RkjCsCus_9kG4iVpQ1qZq5oj9USWmSka/view?usp=sharing)
 
 2014
-:   **Redhat Inc, RHCSA** [link](https://drive.google.com/file/d/1GuE4RZLjqpO-4YreLp6C0LSll93_D3Jp/view?usp=sharing)
+:   **Redhat Inc, RHCSA** [link](https://drive.google.com/file/d/1mi5HfNhFVQC6cjNJ55OjlIBbFQx1gCGD/view?usp=sharing)
 
 2005
 :   **Hofstra University, Computer Science Major**
