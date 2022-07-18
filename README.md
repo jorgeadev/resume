@@ -55,14 +55,14 @@ Professional Experience
 
     *Responsible for creating automated clusters for development and production workloads for developers and data scientist.*
 ---
-Duties include: creating and maintaining helm charts for pipeline systems, creating and maintaining docker related code for deploying/building microservices, creating ansible playbooks for provisioning systems on AWS and Openstack instances, managing onsite and cloud Kubernetes clusters(v1.19.x), managing onsite Openstack cluster, managing AWS cloud, integrate SSO connectivity (AD / LDAP, SSSD), linux administration (ubuntu / centos), assist with Windows AD system administration.
+Duties include: creating and maintaining helm charts for pipeline systems, creating and maintaining docker related code for deploying/building microservices, creating ansible playbooks for provisioning systems on AWS and Openstack instances, managing onsite and cloud Kubernetes clusters(v1.21.x), managing onsite Openstack cluster, managing AWS cloud, integrate SSO connectivity (AD / LDAP, SSSD), linux administration (ubuntu / centos), assist with Windows AD system administration.
 
 2017
 :   **The New York Times, Linux Administator**; New York, NY
 
     *Responsible for monitoring and maintaining large scale publishing infrastructure.*
 ---
-Duties include: ensuring 99.99% SLA for nytimes.com websites. Pingdom, DYDNS, Keynote, management. AWS administration of VPCs, Security Groups, and IAM. Puppet code management via GitHub and SVN. Completing Jira request from client within the organization. Server monitoring via Nagios and Pager Duty.
+Duties include: ensuring 99.99% SLA for nytimes.com websites. Pingdom, DYDNS, Keynote, management. AWS administration of VPCs, Security Groups, and IAM. Puppet code management via GitHub and SVN. Completing Jira requests for internal issue resolution. Server monitoring via Nagios and PagerDuty.
 
 2008-2017
 :   **Church Pension Group, DevOps Engineer**; New York, NY
