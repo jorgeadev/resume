@@ -124,7 +124,10 @@ Education
 2014
 :   **Redhat Inc, RHCSA** [link](https://drive.google.com/file/d/1mi5HfNhFVQC6cjNJ55OjlIBbFQx1gCGD/view?usp=sharing)
 
+2022
+:   **CompTIA, CIOS** [link](https://drive.google.com/file/d/1M5pjR9JcGwQDtZdHd_LZvVxqO7YQuJ1h/view?usp=sharing)
+
 2005
 :   **Hofstra University, Computer Science Major**
 
-* [Resume PDF Version](https://drive.google.com/file/d/1yKRY632FrF7eQX2UEF-TrWprD_efu0oT/view?usp=sharing)
+* [Resume PDF Version]([link](https://drive.google.com/file/d/1z0XsWfXz7WEKDV32wEws3sQxuvfvnLtq/view?usp=sharing)
