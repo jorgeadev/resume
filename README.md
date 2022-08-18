@@ -12,7 +12,7 @@ NextCloud Helm Chart [link](https://github.com/naztyroc/resume/tree/master/helm/
 
 AWS / Python [link](https://github.com/naztyroc/resume/tree/master/aws)
 
-Rashian's Intro to Docker [link](https://www.facebook.com/1120963482/posts/10214187417975674?d=n&sfns=mo)
+Rashian's Intro to Docker [link](https://www.youtube.com/watch?v=HYnOQbxLPbA&t=32s)
 
 Rashian Burns
 ============
