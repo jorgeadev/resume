@@ -12,7 +12,7 @@ NextCloud Helm Chart [link](https://github.com/naztyroc/resume/tree/master/helm/
 
 AWS / Python [link](https://github.com/naztyroc/resume/tree/master/aws)
 
-Rashian's Intro to Docker [link](https://www.youtube.com/watch?v=HYnOQbxLPbA&t=32s)
+Rashian's Intro to Docker [link](https://www.facebook.com/1120963482/posts/10214187417975674?d=n&sfns=mo)
 
 Rashian Burns
 ============
@@ -55,14 +55,14 @@ Professional Experience
 
     *Responsible for creating automated clusters for development and production workloads for developers and data scientist.*
 ---
-Duties include: creating and maintaining helm charts for pipeline systems, creating and maintaining docker related code for deploying/building microservices, creating ansible playbooks for provisioning systems on AWS and Openstack instances, managing onsite and cloud Kubernetes clusters(v1.21.x), managing onsite Openstack cluster, managing AWS cloud, integrate SSO connectivity (AD / LDAP, SSSD), linux administration (ubuntu / centos), assist with Windows AD system administration.
+Duties include: creating and maintaining helm charts for pipeline systems, creating and maintaining docker related code for deploying/building microservices, creating ansible playbooks for provisioning systems on AWS and Openstack instances, managing onsite and cloud Kubernetes clusters(v1.19.x), managing onsite Openstack cluster, managing AWS cloud, integrate SSO connectivity (AD / LDAP, SSSD), linux administration (ubuntu / centos), assist with Windows AD system administration.
 
 2017
 :   **The New York Times, Linux Administator**; New York, NY
 
     *Responsible for monitoring and maintaining large scale publishing infrastructure.*
 ---
-Duties include: ensuring 99.99% SLA for nytimes.com websites. Pingdom, DYDNS, Keynote, management. AWS administration of VPCs, Security Groups, and IAM. Puppet code management via GitHub and SVN. Completing Jira requests for internal issue resolution. Server monitoring via Nagios and PagerDuty.
+Duties include: ensuring 99.99% SLA for nytimes.com websites. Pingdom, DYDNS, Keynote, management. AWS administration of VPCs, Security Groups, and IAM. Puppet code management via GitHub and SVN. Completing Jira request from client within the organization. Server monitoring via Nagios and Pager Duty.
 
 2008-2017
 :   **Church Pension Group, DevOps Engineer**; New York, NY
@@ -108,6 +108,8 @@ Duties included: administrating 5 servers, Sun 4500 Solaris 9 Server (3TB Fiber 
 
 Education
 ----------
+2022
+:  **HashiCorp, Terraform Associate** [link](https://drive.google.com/file/d/180ABkJBbUlRTRVPFD3YZbq9nWs15ixdD/view?usp=sharing)
 
 2021
 :  **The Cloud Native Computing Foundation, Certified Kubernetes Administator** [link](https://drive.google.com/file/d/1yeiW45hn7LWFxYslYYZxU2ltHPX9-0wS/view?usp=sharing)
@@ -124,10 +126,7 @@ Education
 2014
 :   **Redhat Inc, RHCSA** [link](https://drive.google.com/file/d/1mi5HfNhFVQC6cjNJ55OjlIBbFQx1gCGD/view?usp=sharing)
 
-2022
-:   **CompTIA, CIOS** [link](https://drive.google.com/file/d/1M5pjR9JcGwQDtZdHd_LZvVxqO7YQuJ1h/view?usp=sharing)
-
 2005
 :   **Hofstra University, Computer Science Major**
 
-* [Resume PDF Version][link](https://drive.google.com/file/d/1yKRY632FrF7eQX2UEF-TrWprD_efu0oT/view?usp=sharing)
+* [Resume PDF Version](https://drive.google.com/file/d/1yKRY632FrF7eQX2UEF-TrWprD_efu0oT/view?usp=sharing)
