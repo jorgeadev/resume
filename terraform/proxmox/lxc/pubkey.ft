@@ -1,0 +1,3 @@
+locals {
+  pub_key = sensitive(file("keys/id_rsa.pub"))
+}
