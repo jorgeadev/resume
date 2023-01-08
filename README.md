@@ -50,7 +50,14 @@ Skills
 Professional Experience
 ---------
 
-2017-Present
+2022-Present
+:   **Upflex, Senior DevOps Engineer**; New York, NY
+
+    *Responsible for creating and maintaining AWS Infrastructure for Upflex.com.*
+---
+Duties include: develop and maintain CI/CD Ansible and Terraform code via GitLab repositories, collaborating with teams spanning different regions, Jira ticket management, manage DataDog alerts and configurations, manage Okta SSO configurations. Create processes for yearly ISO-27001 and SOC2 audit certification.
+
+2017-2022
 :   **Celmatix, R&D Platform Engineer**; New York, NY
 
     *Responsible for creating automated clusters for development and production workloads for developers and data scientist.*
