@@ -65,7 +65,7 @@ Duties include: develop and maintain CI/CD Ansible and Terraform code via GitLab
 Duties include: creating and maintaining helm charts for pipeline systems, creating and maintaining docker related code for deploying/building microservices, creating ansible playbooks for provisioning systems on AWS and Openstack instances, managing onsite and cloud Kubernetes clusters(v1.19.x), managing onsite Openstack cluster, managing AWS cloud, integrate SSO connectivity (AD / LDAP, SSSD), linux administration (ubuntu / centos), assist with Windows AD system administration.
 
 2017
-:   **The New York Times, Linux Administator**; New York, NY
+:   **The New York Times, Linux Administrator**; New York, NY
 
     *Responsible for monitoring and maintaining large scale publishing infrastructure.*
 ---
