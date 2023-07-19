@@ -100,7 +100,7 @@ Duties include: Administrating and maintaining high performance Linux servers fo
 Duties included: Administering HR Oracle E-Business Suite RAC Cluster (Production Environment   RHEL3 32bit iRecruitment App-tear for internal and external usage via F5 Load Balancing on DMZ subnet, RHEL4 32bit 9i App-tear using shared APPL_TOP via NFS, RHEL4 64bit 10g Database using ASM Raw Devices via EMC Clariion SAN, RHEL4 64bit Oracle Discoverer. Development Environment   RHEL4 32bit Oracle 9i App-tear and RHEL4 64bit 10g Database using ASM Raw Devices via EMC Symmetrix SAN), administrating HR Oracle Real Time Collaboration Suite Cluster (Production Environment   RHEL4 32bit App-tear for internal and external usage via F5 Load Balancing on DMZ subnet, RHEL4 32bit 10g Database via EMC Clariion SAN. Development Environment   RHEL4 32bit App-tear and 10g Database via Symmetrix SAN), administrating Custom Mortgage Rate Loading and Messaging Queue Cluster (Production Environment   RHEL4 64bit MySQL Database using one-direction replication via EMC Clariion SAN with shared GFS, RHEL4 32bit ActiveMQ Messaging service using active-passive failover via EMC Clariion SAN with shared GFS, RHEL4 32bit JBOSS App via active-passive failover, RHEL4 32bit Progress App 10 via F5 Load Balancing. (QA Environment   RHEL4 64bit MySQL Database using one-direction replication via EMC Symmetrix SAN with shared GFS, RHEL4 32bit ActiveMQ Messaging service using active-passive failover via EMC Symmetix SAN with shared GFS, RHEL4 32bit JBOSS App via active-passive failover, RHEL4 32bit Progress App 10 via F5 Load Balancing. (Development Environment   RHEL4 64bit MySQL Database using one-direction replication via EMC Symmetrix SAN with shared GFS, RHEL4 32bit ActiveMQ Messaging service using active-passive failover via EMC Symmetrix SAN with shared GFS, RHEL4 32bit JBOSS App via active-passive failover, RHEL4 32bit Progress App 10 via F5 Load Balancing).
 
 2005-2006
-:   **Fuel Digial Inc., Systems Administator**; New York, NY
+:   **Fuel Digial Inc., Systems Administrator**; New York, NY
 
     *Responsible for overseeing NYC and Orlando IT infrastructures.*
 ---
@@ -130,7 +130,7 @@ Education
 2015
 :   **Redhat Inc, Red Hat Satellite 6 Administration** [link](https://drive.google.com/file/d/1RkjCsCus_9kG4iVpQ1qZq5oj9USWmSka/view?usp=sharing)
 
-2014
+2013
 :   **Redhat Inc, RHCSA** [link](https://drive.google.com/file/d/1mi5HfNhFVQC6cjNJ55OjlIBbFQx1gCGD/view?usp=sharing)
 
 2005
