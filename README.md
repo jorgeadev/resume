@@ -113,7 +113,7 @@ Duties included: ensuring multi-pipe T1 connectivity in NYC, administrating 8 ne
 ---
 Duties included: administrating 5 servers, Sun 4500 Solaris 9 Server (3TB Fiber Channel Raid 10 File Server with Apache 1.3 with Java interface and MySQL database backend while broadcasting SMB, NFS, and AFPv3) which was migrated over to SGI Origin 300, 2 Apple G4 Xserve and Xraid (2TB Fiber Channel Raid 5 Font Server hosting FrontBase database while broadcasting SMB and AFPv2), Apple G5 (FrontBase database helpdesk Server), maintained custom web (PHP with MySQL backend) database application system. Provided Macintosh and PC hardware (Apple, Compaq) and software (Adobe Suite, MS Office, SAP, and JAVA) support within a 300+ user environment. Periodically assisted with Cisco router switch Vlan management.
 
-Education
+Certifications & Education
 ----------
 2022
 :  **HashiCorp, Terraform Associate** [link](https://drive.google.com/file/d/180ABkJBbUlRTRVPFD3YZbq9nWs15ixdD/view?usp=sharing)
