@@ -1,0 +1,12 @@
+---
+- hosts: all
+  remote_user: ansible
+  vars:
+    branch: rashian # <= Enter Your Branch Name
+  tasks:
+    - name: Deploy Student Code to WebServer
+      git:
+        repo: https://gitlab.wan-scape.com/rburns/students.git
+        dest: /var/www/html/{{ branch }}/
+        update: yes
+        version: "{{ branch }}"

@@ -1,0 +1,40 @@
+stages:
+  - check
+  - build
+  - run
+
+variables:
+    ANSIBLE_HOST_KEY_CHECKING: 'false'
+    ANSIBLE_FORCE_COLOR: 'true'
+
+# Check Ansible Host Connectivity
+check:
+  stage: check
+  tags:
+    - shell
+  script:
+    - |
+      #/bin/bash
+      ANSIBLE_HOST_KEY_CHECKING=False ansible all -u ansible -m ping -i ${ANSIBLE_HOST},
+
+# Build Anible Run Process
+build:
+  stage: build
+  tags:
+    - shell
+  needs: ["check"]
+  script:
+    - |
+      #/bin/bash
+      ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ${ANSIBLE_HOST}, ./main.yml --check
+
+# Anible Run Process
+run:
+  stage: run
+  tags:
+    - shell
+  needs: ["build"]
+  script:
+    - |
+      #/bin/bash
+      ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ${ANSIBLE_HOST}, ./main.yml
