@@ -10,7 +10,7 @@ Terraform Kubernetes (minikube local build) [link](https://github.com/naztyroc/r
 
 Kubernetes NextCloud Helm Chart [link](https://github.com/naztyroc/resume/tree/master/helm/charts/nextcloud)
 
-GitLab Pipeline Example [link](https://github.com/naztyroc/resume/tree/master/gitlab)
+GitLab Pipeline Example [link](https://github.com/naztyroc/resume/tree/master/gitlab-ci)
 
 AWS / Python [link](https://github.com/naztyroc/resume/tree/master/aws)
 
