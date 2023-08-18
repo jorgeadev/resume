@@ -1,20 +1,22 @@
  ### Sample DevOps Code
 
-Base Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/base)
+Ansible Base Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/base)
 
-MySQL Galera Cluster Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/mysql)
+Ansible MySQL Galera Cluster Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/mysql)
 
-HA Proxy Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/haproxy)
+Ansible HA Proxy Server provisioning [link](https://github.com/naztyroc/resume/tree/master/ansible-playbooks/haproxy)
 
 Terraform Kubernetes (minikube local build) [link](https://github.com/naztyroc/resume/tree/master/terraform)
 
-NextCloud Helm Chart [link](https://github.com/naztyroc/resume/tree/master/helm/charts/nextcloud)
+Kubernetes NextCloud Helm Chart [link](https://github.com/naztyroc/resume/tree/master/helm/charts/nextcloud)
+
+GitLab Pipeline Example [link](https://github.com/naztyroc/resume/tree/master/gitlab)
 
 AWS / Python [link](https://github.com/naztyroc/resume/tree/master/aws)
 
 Rashian's Intro to Docker [link](https://www.facebook.com/1120963482/posts/10214187417975674?d=n&sfns=mo)
 
-Rashian Burns
+Rashian Burns Resume
 ============
 
 -------------------     ----------------------------
@@ -26,7 +28,7 @@ Skills
 
 * OVER 15+ YEARS EXPERIENCE IN LINUX SERVER ADMINISTRATION
 * MANAGING AWS EC2, VPC, S3 WORKLOADS
-* DEVELOPMENT CODE LIFECYCLE MANAGEMENT (GITHUB / GITLAB / SVN)
+* DEVELOPMENT CODE LIFECYCLE MANAGEMENT CI/CD (GITHUB | GITLAB)
 * MICRO-SERVICES ENGINEERING (KUBERNETES AND DOCKER)
 * VIRTUALIZATION WORKFLOW INFRASTRUCTURE KNOWLEDGE (VSPHERE, OPENSTACK, VCLOUD, VAGRANT)
 * SYSTEM AUTOMATION LANGUAGES (ANSIBLE, PUPPET, PYTHON-FABRIC)
@@ -53,9 +55,9 @@ Professional Experience
 2022-Present
 :   **Upflex, Senior DevOps Engineer**; New York, NY
 
-    *Responsible for creating and maintaining AWS Infrastructure for Upflex.com.*
+    *Responsible for creating automated pipelines for development and production workloads for Upflex.com Platform.*
 ---
-Duties include: develop and maintain CI/CD Ansible and Terraform code via GitLab repositories, collaborating with teams spanning different regions, Jira ticket management, manage DataDog alerts and configurations, manage Okta SSO configurations. Create processes for yearly ISO-27001 and SOC2 audit certification.
+Duties include: Develop and maintain Ansible, Terraform, and containerized code to create automated pipelines for development and production deployments. Conduct Code Collaboration on Gitlab for proper CI/CD workflows with teams spanning across different regions. Agile Project Management via Jira to track tasks and process. Manage DataDog configurations for Event Management. Create proper documentation detailing all workflows in Confluence along with processes for yearly ISO-27001 and SOC2 audits
 
 2017-2022
 :   **Celmatix, R&D Platform Engineer**; New York, NY
@@ -136,4 +138,4 @@ Certifications & Education
 2005
 :   **Hofstra University, Computer Science Major**
 
-* [Resume PDF Version](https://drive.google.com/file/d/10ZFRmdZ_nHg8pSu7cw4c9C73MX7zF_oQ/view?usp=sharing)
+* [Resume PDF Version](https://drive.google.com/file/d/1tNW4IgS902lCEewtZaJLDPM6MOQJHlpG/view?usp=sharing)
