@@ -83,14 +83,14 @@ Duties include: performing remote management using Puppet manifest that execute 
 
 Certifications & Education
 ----------
+2023
+:  **Amazon Web Services, Certified Solutions Architect - Associate** [link](https://drive.google.com/file/d/1_XAA2M1An2I1AFp5MY79URyQkJuOWTat/view?usp=sharing)
+
 2022
 :  **HashiCorp, Terraform Associate** [link](https://drive.google.com/file/d/180ABkJBbUlRTRVPFD3YZbq9nWs15ixdD/view?usp=sharing)
 
 2021
 :  **The Cloud Native Computing Foundation, Certified Kubernetes Administator** [link](https://drive.google.com/file/d/1yeiW45hn7LWFxYslYYZxU2ltHPX9-0wS/view?usp=sharing)
-
-2020
-:  **Amazon Web Services, Certified Solutions Architect - Associate** [link](https://drive.google.com/file/d/1_XAA2M1An2I1AFp5MY79URyQkJuOWTat/view?usp=sharing)
 
 2020
 :  **Amazon Web Services, Cloud Practitioner** [link](https://drive.google.com/file/d/1JmyxXIHP0DWU6k2DxD4IAF15NQKV_DLD/view?usp=sharing)
