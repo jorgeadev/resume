@@ -1,12 +1,28 @@
-# aws-ec2-userdata-samples
-AWS EC2 userdata-samples
+# WAKE TECH - Class Project Spring 2024
+2024CE1.NET.3100P2.84790
+
+Student Group Chart
+
+| Group-A         | Group-B        | Group-C           | Group-D            | Group-E               | Group-F         |
+|-----------------|----------------|-------------------|--------------------|-----------------------|-----------------|
+| Alesha Braswell | Patrick Hobin  | Jahmel McLaughlin | Damion Stewart     | Willard Poindexter    | James Purington |
+| Leon Wall       | Naeemhia Davis | Shreelaxmi Nayak  | Apollonia Rossicci | Kaashyap Chilakamarri | Devin Hyman     |
+| Mona Chauhan    | Carla Skipper  | Ashley Collins    | James Perry        | Devon Asmus           | Reda Khelifa    |
 
 
+![](Class_Project_v1.jpg)
 
-## Sample userdata for ec2 and how to use it
+## Objectives
 
-In the userdata for the ec2, add the command `curl` and the link for the script you want to run folloed by pip `| bash` to execute the script. 
+Create 2 EC2 instances, each inside a new VPC within a public and a private subnet, within 2 availability zones, and configure them behind a load balancer. Your EC2 instances should be accessible from the ELB. When users hit your ELB, the page should display the following for each EC2 instance:
 
+**INSTANCE_INFO<br />
+INSTANCE_ID<br />
+INSTANCE_AZ<br />
+INSTANCE_TYPE<br />
+INSTANCE_REGION<br />**
+
+###  Use the EC2 userdata below for your webserver to create the required output
 
 ```
 #!/bin/bash
