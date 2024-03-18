@@ -22,8 +22,7 @@ Create 2 EC2 instances, each inside a new VPC within a public and a private subn
 
 When users hit your ELB, the page should display the following for each EC2 instance:
 
-**INSTANCE_INFO<br />
-INSTANCE_ID<br />
+**INSTANCE_ID<br />
 INSTANCE_AZ<br />
 INSTANCE_TYPE<br />
 INSTANCE_REGION<br />**
