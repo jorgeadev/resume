@@ -10,13 +10,17 @@ Student Group Chart
 | Mona Chauhan    | Carla Skipper  | Ashley Collins    | James Perry        | Devon Asmus           | Reda Khelifa    |
 
 <br />
+ <br />
 
 ![](Class_Project_v1.jpg)
 
 ## Objective
 <br />
 
-Create 2 EC2 instances, each inside a new VPC within a public and a private subnet, across 2 availability zones, and configure them behind a load balancer. Your EC2 instances should be accessible from the ELB. When users hit your ELB, the page should display the following for each EC2 instance:
+Create 2 EC2 instances, each inside a new VPC within a public and a private subnet, across 2 availability zones, and configure them behind a load balancer. Your EC2 instances should be accessible from the ELB.
+ <br />
+
+When users hit your ELB, the page should display the following for each EC2 instance:
 
 **INSTANCE_INFO<br />
 INSTANCE_ID<br />
@@ -25,7 +29,7 @@ INSTANCE_TYPE<br />
 INSTANCE_REGION<br />**
 
 <br />
-
+ <br />
 ####  Use the EC2 userdata below for your webserver to create the required output
 
 ```
