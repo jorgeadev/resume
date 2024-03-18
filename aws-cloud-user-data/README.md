@@ -14,7 +14,7 @@ Student Group Chart
 
 ## Objectives
 
-Create 2 EC2 instances, each inside a new VPC within a public and a private subnet, within 2 availability zones, and configure them behind a load balancer. Your EC2 instances should be accessible from the ELB. When users hit your ELB, the page should display the following for each EC2 instance:
+Create 2 EC2 instances, each inside a new VPC within a public and a private subnet, across 2 availability zones, and configure them behind a load balancer. Your EC2 instances should be accessible from the ELB. When users hit your ELB, the page should display the following for each EC2 instance:
 
 **INSTANCE_INFO<br />
 INSTANCE_ID<br />
