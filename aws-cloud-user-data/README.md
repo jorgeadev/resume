@@ -12,7 +12,7 @@ Student Group Chart
 <br />
  <br />
 
-![](Class_Project_v1.jpg)
+![](Class_Project_v2.jpg)
 
 ## Objective
 <br />
