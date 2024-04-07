@@ -37,5 +37,5 @@ INSTANCE_REGION<br />**
 
 cd /tmp/
 
-curl https://github.com/naztyroc/resume/blob/master/aws-cloud-user-data/sample01-hello-world-region-az.sh | bash
+curl https://raw.githubusercontent.com/naztyroc/resume/master/aws-cloud-user-data/sample01-hello-world-region-az.sh | bash
 ```
