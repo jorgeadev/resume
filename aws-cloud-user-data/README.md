@@ -14,7 +14,7 @@ Student Group Chart
 
 ![](Class_Project_v2.jpg)
 
-## Objective (DUE APRIL 30th, 2024)
+## Objective (DUE May 8th, 2024)
 <br />
 
 Create 2 EC2 Linux (Webserver) instances, each inside a new VPC within a public and a private subnet, across 2 availability zones, and configure them behind a load balancer. Your EC2 instances should be accessible from the ELB.
