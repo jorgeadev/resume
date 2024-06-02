@@ -1,20 +1,20 @@
-# WAKE TECH - Class Project Spring 2024
-2024CE1.NET.3100P2.84790
+# WAKE TECH - Class Project Summer 2024
+2024CE3.NET.3100P2.93221
 
 Student Group Chart
 
-| Group-A         | Group-B        | Group-C           | Group-D            | Group-E               | Group-F         |
-|-----------------|----------------|-------------------|--------------------|-----------------------|-----------------|
-| Alesha Braswell | Patrick Hobin  | Jahmel McLaughlin | Damion Stewart     | Willard Poindexter    | James Purington |
-| Leon Wall       | Naeemhia Davis | Shreelaxmi Nayak  | Apollonia Rossicci | Kaashyap Chilakamarri | Devin Hyman     |
-| Mona Chauhan    | Carla Skipper  | Ashley Collins    | James Perry        | Devon Asmus           | Reda Khelifa    |
+| Group-A | Group-B | Group-C | Group-D | Group-E | Group-F |
+|---------|---------|---------|---------|---------|---------|
+| -       | -       | -       | -       | -       | -       |
+| -       | -       | -       | -       | -       | -       |
+| -       | -       | -       | -       | -       | -       |
 
 <br />
  <br />
 
 ![](Class_Project_v2.jpg)
 
-## Objective (DUE May 8th, 2024)
+## Objective (DUE September 4th, 2024)
 <br />
 
 Create 2 EC2 Linux (Webserver) instances, each inside a new VPC within a public and a private subnet, across 2 availability zones, and configure them behind a load balancer. Your EC2 instances should be accessible from the ELB.
