@@ -3,21 +3,22 @@
 
 Student Group Chart
 
-| Group-A | Group-B | Group-C | Group-D | Group-E | Group-F |
-|---------|---------|---------|---------|---------|---------|
-| -       | -       | -       | -       | -       | -       |
-| -       | -       | -       | -       | -       | -       |
-| -       | -       | -       | -       | -       | -       |
+| Group-A                | Group-B            | Group-C                  | Group-D               |
+|------------------------|--------------------|--------------------------|-----------------------|
+| Anish Mathew           | Yassir Romero      | Darrell Jimmerson        | Derrick Dwayne Mills  |
+| Jennifer Chonillo      | Joey Hubert Smith  | Megan Carpenter Townsend | Ping Wu               |
+| Rudy Daniel Rodriguez  | Sreelaxmi Surswari | Cody Fagan               | Youssef Cherqaoui     |
+| Marwa Allam            | -                  | -                        | Marquita Washington   |
 
 <br />
  <br />
 
-![](Class_Project_v2_Summer.jpg)
+![](Class_Project_v3_Summer.jpg)
 
-## Objective (DUE September 4th, 2024)
+## Objective (DUE September 16th, 2024)
 <br />
 
-Create 2 EC2 Linux (Webserver) instances, each inside a new VPC within a public and a private subnet, across 2 availability zones, and configure them behind a load balancer. Your EC2 instances should be accessible from the ELB.
+Create 2 EC2 Linux (Webserver) instances, each inside a new VPC within two public subnets, across 2 availability zones, and configure them behind a load balancer. Your EC2 instances should be accessible from the ELB.
  <br />
 
 When users hit your ELB, the page should display the following for each EC2 instance:
