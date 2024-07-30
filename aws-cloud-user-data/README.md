@@ -3,12 +3,11 @@
 
 Student Group Chart
 
-| Group-A                | Group-B            | Group-C                  | Group-D               |
-|------------------------|--------------------|--------------------------|-----------------------|
-| Anish Mathew           | Yassir Romero      | Darrell Jimmerson        | Derrick Dwayne Mills  |
-| Jennifer Chonillo      | Joey Hubert Smith  | Megan Carpenter Townsend | Ping Wu               |
-| Rudy Daniel Rodriguez  | Sreelaxmi Surswari | Cody Fagan               | Youssef Cherqaoui     |
-| Marwa Allam            | -                  | -                        | Marquita Washington   |
+| Group-A                | Group-B            | Group-C                  | Group-D               | Group-E             |
+|------------------------|--------------------|--------------------------|-----------------------|---------------------|
+| Anish Mathew           | Yassir Romero      | Darrell Jimmerson        | Derrick Dwayne Mills  | Youssef Cherqaoui         |
+| Jennifer Chonillo      | Joey Hubert Smith  | Megan Carpenter Townsend | Marquita Washington               | Ping Wu |
+| Rudy Daniel Rodriguez  | Sreelaxmi Surswari | Cody Fagan               | Marwa Allam     | ----                |
 
 <br />
  <br />
