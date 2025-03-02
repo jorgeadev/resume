@@ -12,7 +12,7 @@ Student Group Chart
 <br />
  <br />
 
-![](Class_Project_v3_Summer.jpg)
+![](Class_Project_v4.jpg)
 
 ## Objective (DUE May 21th, 2025)
 <br />
