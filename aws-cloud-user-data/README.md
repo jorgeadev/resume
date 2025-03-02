@@ -1,20 +1,20 @@
-# WAKE TECH - Class Project Summer 2024
-2024CE3.NET.3100P2.93221
+# WAKE TECH - Class Project Spring 2025
+2025CE2.NET.3100P2.07431
 
 Student Group Chart
 
-| Group-A                | Group-B            | Group-C                  | Group-D               | Group-E             |
-|------------------------|--------------------|--------------------------|-----------------------|---------------------|
-| Anish Mathew           | Yassir Romero      | Darrell Jimmerson        | Derrick Dwayne Mills  | Youssef Cherqaoui         |
-| Jennifer Chonillo      | Joey Hubert Smith  | Megan Carpenter Townsend | Marquita Washington               | Ping Wu |
-| Rudy Daniel Rodriguez  | Sreelaxmi Surswari | Cody Fagan               | Marwa Allam     | ----                |
+| Group-A | Group-B         | Group-C      | Group-D          | Group-E           | Group-F |
+|----|-----------------|--------------|------------------|-------------------|---------|
+| James Campbell | Brian Cotten    | Shermon Gardner | Jorge Gomez      | Nicholas Goshay   | Etan Ulanday        |
+| Sakshi Sakshi | Ana Pagliro     | Mireille Tyadi | August McConnell | Danille Williams |     Khanh Long Nguyen     |
+| Alexander Rowe | Prajwal Shakya  | Cody Fagan   | Bryce Roberson   | Collins Senaya    |         |
 
 <br />
  <br />
 
 ![](Class_Project_v3_Summer.jpg)
 
-## Objective (DUE September 16th, 2024)
+## Objective (DUE May 21th, 2025)
 <br />
 
 Create 2 EC2 Linux (Webserver) instances, each inside a new VPC within two public subnets, across 2 availability zones, and configure them behind a load balancer. Your EC2 instances should be accessible from the ELB.

@@ -1,4 +1,4 @@
-# LDAP Authenication Playbook
+# LDAP Authentication Playbook
 ---
 - name: Install LDAP Packages
   yum:

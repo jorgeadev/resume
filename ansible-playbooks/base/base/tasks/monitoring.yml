@@ -64,8 +64,8 @@
 
 - name: Configure Prometheus Process Exporter
   copy:
-    src: base/templates/process-exporter.yml.j2
-    dest: /etc/process-exporter.yml
+    src: base/templates/process-exporter.httpd.yml.j2
+    dest: /etc/process-exporter.httpd.yml
   when: process_exporter_status.stat.exists == false
 
 - name: Set Prometheus Process Exporter systemd script
@@ -94,8 +94,8 @@
 
 - name: Configure Filebeat
   template:
-    src: filebeat.yml.j2
-    dest: /etc/filebeat/filebeat.yml
+    src: filebeat.httpd.yml.j2
+    dest: /etc/filebeat/filebeat.httpd.yml
   when: filebeat_status.stat.exists == false
   notify:
     - restart-filebeat
