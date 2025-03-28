@@ -15,7 +15,7 @@ Computer Name: STUDENT(x)<br />
 
 #### 2) Configure Virtual Router - Default(admin:password)<br />
 IP: 192.168.1(x).1<br />
-Change Password to: Passwordx<br />
+Change Password to: Password(x)<br />
 Internal DHCP with Static MAC Leasing<br />
 Insure Workstation IP: 192.168.1(x).1(x)<br />
 Force HTTP to use HTTPS<br />
