@@ -17,7 +17,7 @@ Computer Name: STUDENT(x)<br />
 IP: 192.168.1(x).1<br />
 Change Password to: Passwordx<br />
 Internal DHCP with Static MAC Leasing<br />
-Insure Workstation IP: 192.168.1(x).10(x)<br />
+Insure Workstation IP: 192.168.1(x).1(x)<br />
 Force HTTP to use HTTPS<br />
 External DHCP<br />
 
