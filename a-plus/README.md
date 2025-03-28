@@ -53,4 +53,4 @@ R:\TEST --> Username: test<br />
 #### 9) Install Google Chrome Browser
 <br />
 
-![](A-Plus-Project_v3.jpg)
+![](A-Plus-Project_v4.jpg)
