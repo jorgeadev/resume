@@ -3,11 +3,11 @@
 
 Student Group Chart
 
-| Group-A                            | Group-B        | Group-C         | Group-D          | Group-E          | 
-|------------------------------------|----------------|-----------------|------------------|------------------|
-| James Campbell                     | Brian Cotten   | Shermon Gardner | Jorge Gomez      | Nicholas Goshay  |
-| Sakshi Sakshi                      | Ana Pagliro    | Mireille Tyadi  | August McConnell | Danille Williams |
-| Alexander Rowe / Khanh Long Nguyen | Prajwal Shakya | Cody Fagan      | Bryce Roberson   | Collins Senaya   |
+| Group-A                          | Group-B        | Group-C | Group-D          | Group-E          | 
+|----------------------------------|----------------|-------|------------------|------------------|
+| James Campbell                   | Brian Cotten   | Shermon Gardner | Jorge Gomez      | Nicholas Goshay  |
+| Sakshi Sakshi                    | Ana Pagliro    | Mireille Tyadi | August McConnell | Danille Williams |
+| Alexander Rowe  | Prajwal Shakya | Khanh Long Nguyen      | Bryce Roberson   | Collins Senaya   |
 
 <br />
  <br />
