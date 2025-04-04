@@ -13,7 +13,7 @@ Password: Password(x)<br />
 Computer Name: STUDENT(x)<br />
 
 
-#### 2) Configure Virtual Router - Default(admin:password:192.168.0.1)<br />
+#### 2) Configure Virtual Router - Default([admin:password] IP:192.168.0.1)<br />
 IP: 192.168.1(x).1<br />
 Change Password to: Password(x)<br />
 Internal DHCP with Static MAC Leasing<br />
