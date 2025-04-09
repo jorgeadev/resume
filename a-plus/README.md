@@ -39,7 +39,7 @@ Drive Letter S:<br />
 Drive Letter R:<br />
 
 
-#### 7) Create 2 folders on T: Drive<br />
+#### 7) Create 2 folders on R: Drive<br />
 DEV<br />
 TEST<br />
 
